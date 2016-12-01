@@ -35,7 +35,6 @@ if(!isset($_SESSION['user'])){
                                 <a href=\"logout.php?logout=true\">Log out</a>
                             ";
             }else{
-                echo"
                                 <a href=\"login.php\">Log in</a>
                             ";
             }
