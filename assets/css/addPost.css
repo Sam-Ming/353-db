@@ -1,0 +1,143 @@
+.formName{
+    /*color: #fafffb;*/
+    max-width: 100%;
+    margin-bottom: auto;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-left:70px;
+    margin-top: 30px;
+}
+
+.new_post{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    /*height: 700px;*/
+    width: 700px;
+    margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+    height:auto;
+}
+
+.restriction{
+    display: inline-block;
+}
+
+.textBoxWrapper{
+    display: block;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.43;
+    border-radius: 4px;
+}
+
+#formName, textarea {
+    border-color:#cccccc;
+    padding:10px;
+    font-size:16px;
+    border-radius:7px;
+    border-width:1px;
+    /*border-style:groove;*/
+    width: 80%;
+}
+
+input:focus, textarea { outline:none; }
+
+textarea{
+    resize: none;
+    overflow: auto;
+    height: 400px;
+}
+
+.weekdate{
+    background: white;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-color:#cccccc;
+    padding:10px;
+    border-radius:7px;
+    border-width:1px;
+}
+
+.head{
+    padding-bottom: 19px;
+    color: white;
+    margin-left:30px;
+    font-size: 30px;
+    text-align:left;
+    padding-top:30px;
+}
+
+.datepicker{
+    width: 200px;
+    height: 16px;
+    border-color:#cccccc;
+    padding:10px;
+    font-size:16px;
+    border-radius:7px;
+    border-width:1px;
+}
+
+.city{
+    width: 200px;
+    height: 30px;
+    border-color:#cccccc;
+    padding:10px;
+    font-size:16px;
+    border-radius:7px;
+    border-width:1px;
+}
+
+.styled-select select {
+    background: transparent;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    padding:5px;
+    float: left;
+}
+
+.postal{
+    width: 200px;
+    height: 16px;
+    border-color:#cccccc;
+    padding:10px;
+    font-size:16px;
+    border-radius:7px;
+    border-width:1px;
+    margin:auto;
+    vertical-align:top;
+    display: inline-block;
+}
+
+.styled-select {
+    width: 200px;
+    height: 28px;
+    border-color:#cccccc;
+    padding:5px;
+    font-size:16px;
+    border-radius:7px;
+    border-width:1px;
+    font-family: 'Exo 2', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow: hidden;
+    background-color: white;
+    display: inline-block;
+    vertical-align:top;
+}
+
+select{
+    color: #929292;
+}
+
+textarea::-webkit-input-placeholder{
+    font-family: 'Exo 2', "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body{
+    background-color: lightblue;
+    font-family: 'Exo 2', "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+

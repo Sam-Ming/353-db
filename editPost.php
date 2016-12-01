@@ -1,3 +1,13 @@
+<?php if(session_status()==PHP_SESSION_NONE){
+    session_start();
+}
+
+if(!isset($_SESSION['user'])){
+    header("Location: login.php");
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,8 +30,8 @@
     <body>
 
     <header class="header-basic">
-        <link rel="stylesheet" type="text/css" href="css/header.css">
-        <link rel="stylesheet" type="text/css" href="css/addPost.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/header.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/addPost.css"/>
 
 
         <div class="header-limiter">
@@ -29,8 +39,20 @@
             <h1><a href="index.php">Su<span>per</span></a></h1>
 
             <nav>
+                <?php
+                if(isset($_SESSION['user'])){
+                    echo"
+                                <a>Welcome ".$_SESSION['userName'].
+                        ", </a>
+                                <a href=\"logout.php?logout=true\">Log out</a>
+                            ";
+                }else{
+                    echo"
+                                <a href=\"login.php\">Log in</a>
+                            ";
+                }
+                ?>
                 <a href="#">Support</a>
-                <a href="#">Log in</a>
                 <a href="#">About</a>
             </nav>
         </div>
@@ -67,13 +89,13 @@
 </html>
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "person";
+$servername = "vpc353_2.encs.concordia.ca";
+$username = "vpc353_2";
+$password = "A5DNm8";
+$dbname = "vpc353_2";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=person", $username, $password);
+    $conn = new PDO("mysql:host=$servername;$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //        $sql = "INSERT INTO SAILORS (sname, rating, age)
 //                VALUES ('John', '8', '18')";

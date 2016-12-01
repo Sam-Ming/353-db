@@ -1,0 +1,128 @@
+h1.categoryHeading{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.community a{
+    display: inline-block;
+    position: relative;
+    margin: 1%;
+    float: left;
+    width: 430px;
+    height: auto;
+    border: 1px solid #fafffb;
+    box-shadow: 5px 5px 5px #888888;
+    text-decoration: none;
+    color: white;
+}
+
+.match{
+    width: 45%;
+    position: relative;
+    margin: auto;
+}
+
+.match .serviceContent{
+    width:auto;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #f0f3f4;
+}
+
+.serviceContent{
+    background: rgba(145, 156, 152, 0.27);
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.serviceContent:hover{
+    border: 1px solid #f7fdff;
+    box-shadow: 10px 10px 10px #888888 ;
+    background-color: rgba(0,0,0,.35);
+}
+
+.serviceIcon{
+    float:left;
+    height: 50px;
+    width: 50px;
+    padding: 20px 0;
+    margin: 10px;
+}
+
+.serviceDetail{
+    float:left;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.serviceHeader{
+    color: white;
+}
+
+.serviceDescription{
+    color: rgba(255,255,255,.7);
+    font-size: .9375rem;
+    line-height: 1.25;
+    margin: .25em 0 0;
+    max-height: 3.515625rem;
+    overflow: hidden;
+    padding: 0;
+    word-wrap:break-word
+}
+
+.community{
+    background-color:lightblue;
+}
+
+.category{
+    display:inline-block;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-family: lucida grande ,tahoma,verdana,arial,sans-serif;
+    opacity : 0.8;
+}
+
+
+.category p {
+    color: white;
+    line-height: 1.25;
+}
+
+
+#banner {
+    background-image: url(../../Images/bar_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+footer {
+    clear: both;
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    border: 3px solid #E3E3E3;
+    text-align: center;
+    color: #fff;
+}
+
+.match a{
+    background-color: #ff7079;
+    color: white;
+    width: 45%;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.match a:hover, a:active {
+    background-color: #f4d0a0;
+}

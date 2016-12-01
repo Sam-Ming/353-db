@@ -1,46 +1,59 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: aaronchen
- * Date: 2016-11-10
- * Time: 12:43 PM
- */
+<?php if(session_status()==PHP_SESSION_NONE){
+    session_start();
+}
+
+if(!isset($_SESSION['user'])){
+    header("Location: login.php");
+}
 ?>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-    <header class="header-basic">
-        <link rel="stylesheet" type="text/css" href="css/header.css">
-        <link rel="stylesheet" type="text/css" href="css/addPost.css"/>
+<header class="header-basic">
+    <link rel="stylesheet" type="text/css" href="assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/addPost.css"/>
 
 
-        <div class="header-limiter">
+    <div class="header-limiter">
 
-            <h1><a href="index.php">Su<span>per</span></a></h1>
+        <h1><a href="index.php">Su<span>per</span></a></h1>
 
-            <nav>
-                <a href="#">Support</a>
-                <a href="#">Log in</a>
-                <a href="#">About</a>
-            </nav>
-        </div>
-    </header>
+        <nav>
+            <?php
+            if(isset($_SESSION['user'])){
+                echo"
+                                <a>Welcome ".$_SESSION['userName'].
+                    ", </a>
+                                <a href=\"logout.php?logout=true\">Log out</a>
+                            ";
+            }else{
+                echo"
+                                <a href=\"login.php\">Log in</a>
+                            ";
+            }
+            ?>
+            <a href="#">Support</a>
+            <a href="#">About</a>
+        </nav>
+    </div>
+</header>
 
-    <p class="success" style="text-align: center">
-        <p>Delete Posts by Trip Number</p>
+<p class="success" style="text-align: center">
+<h1>Delete Posts by Trip Number</h1>
+
         <?php
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "trip";
+                    $servername = "vpc353_2.encs.concordia.ca";
+                    $username = "vpc353_2";
+                    $password = "A5DNm8";
+                    $dbname = "vpc353_2";
                     // Create connection
                     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -52,25 +65,18 @@
             // output data of each row
             while($row = $result->fetch_assoc()) {
 
-                /* Link the TID from deletedPost.php to delete.php
-                    still have errors
-                    -*/
-                $myVar = $row["tid"];
+                $TID =  $row["tid"];
 
                 echo "Trip ID: " . $row["tid"]. "<br>";
-                echo '<a href="deleted.php?subject='.$row["tid"].'">Click here to delete.</a> <p>';
+                echo '<a href="action_delete.php?subject='.$TID.'">Yes, delete!</a><p>';
             }
         } else {
             echo "0 results";
         }
 
         ?>
-</p>
+
+
 
 </body>
 </html>
-
-
-
-
-//SAM HELLLO look here ***********************************
